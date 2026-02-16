@@ -18,7 +18,7 @@ const Connect = () => {
         })
 
     const [captcha, SetCaptcha] = useState<string | null>(null)
-    const handleSubmit = (e: React.FormEvent<SubmitEvent>) => {
+    const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (captcha === null || captcha === "") {
             return toast.error("Please Verfify")
